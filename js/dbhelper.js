@@ -24,14 +24,7 @@ static fetchRestaurants(callback){
     callback(errorMessage, null);
   });
 }
-var dbPromise = idb.open('mwsrestaurants',1, function(upgradeDb){
-  switch (upgradeDb.oldVersion){
-    case 0:
-    case 1:
-    console.log('Creating object store');
-    upgradeDb.createObjectStore('restaurants', {keyPath:'id'});
-  }
-});
+
 
   /**
    * Fetch a restaurant by its ID.
