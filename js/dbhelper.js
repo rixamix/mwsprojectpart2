@@ -1,6 +1,6 @@
 
 class DBHelper {
-
+  var dbPromise = idb.open('anything', 1);
 
 
   /**
@@ -11,6 +11,8 @@ class DBHelper {
     const port = 1337 // Change this to your server port
     return `http://localhost:${port}/restaurants`;
   }
+
+
 
   /**
    * Fetch all restaurants.
