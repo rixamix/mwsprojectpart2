@@ -1,6 +1,6 @@
 
 class DBHelper {
-  var dbPromise = idb.open('anything', 1);
+  
 
 
   /**
